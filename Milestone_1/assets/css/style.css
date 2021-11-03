@@ -152,6 +152,26 @@ main #mainContainer {
     font-size: 0.9rem;
 }
 
+/* / SEZIONE NOTIFICHE */
+
+#mainSide .search {
+    background-color: #eaeaea;
+    padding: 0.5rem;
+}
+
+#mainSide .search .insert_txt {
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    display: flex;
+}
+
+#mainSide .insert_txt input {
+    flex-grow: 1;
+    border: none;
+    margin-left: 1rem;
+}
+
 
 /* 
         //// MAIN SIDE
