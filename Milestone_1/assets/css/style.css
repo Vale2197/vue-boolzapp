@@ -4,6 +4,15 @@
     margin: 0;
 }
 
+body {
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+i {
+    color: #b1b1b1;
+}
+
 header {
     width: 100%;
     height: 8rem;
@@ -20,8 +29,74 @@ nav {
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
+    display: flex;
 }
 
+nav .profilo_utente {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profilo_utente .nome {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem
+
+}
+
+.img {
+    width: 5rem;
+    height: 5rem;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profilo_utente .nome p {
+    padding-left: 0.5rem;
+}
+
+.profilo_utente .opzioni_profilo {
+    padding-right: 1rem;
+}
+
+/* 
+    PROFILO UTENTE
+*/
+
+
+nav .chat_corrente {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-left: 1px solid #dadbd4;
+}
+
+.chat_corrente .nome {
+    display: flex;
+    align-items: center;
+}
+
+.chat_corrente .txt {
+    padding-left: 1rem;
+}
+
+.chat_corrente .txt p:last-child {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+
+/* 
+        / NAV
+*/
 main {
     width: 100%;
     background-color: #dadbd4;
@@ -38,11 +113,11 @@ main #mainContainer {
 }
 
 #mainContainer #mainSide {
-    flex-grow: 1;
+    width: 35%;
     background-color: pink;
 }
 
 #mainContainer #container {
-    flex-grow: 2;
+    width: 65%;
     background-color: cornflowerblue;
 }
