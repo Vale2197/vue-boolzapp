@@ -17,9 +17,9 @@
 
                     <div class="nome">
                         <div class="img">
-                            <img src="https://picsum.photos/200/300" alt="ss">
+                            <img :src="'./assets/img/avatar' + me.avatar + '.jpg'" alt="ss">
                         </div>
-                        <p>nome utente</p>
+                        <p>{{me.name}}</p>
                     </div>
                     <!-- /nome utente -->
                     <div class="opzioni_profilo">
@@ -36,11 +36,11 @@
                 <div class="chat_corrente">
                     <div class="nome">
                         <div class="img">
-                            <img src="https://picsum.photos/id/237/200/300" alt="s">
+                            <img :src="'./assets/img/avatar' + contacts[counter].avatar + '.jpg'" alt="s">
                         </div>
                         <div class="txt">
-                            <p>nome</p>
-                            <p>ultimo acc.</p>
+                            <p>{{contacts[counter].name}}</p>
+                            <p>ultimo accesso oggi alle</p>
                         </div>
                     </div>
                     <!-- / profilo chat corrente -->
@@ -85,29 +85,9 @@
                          / SEARCH
                      -->
                     <div class="contatti">
-                        <div class="contatto">
-                            <img src="https://picsum.photos/id/237/200/300" alt="a">
-                            <p>nome</p>
-                        </div>
-                        <div class="contatto">
-                            <img src="https://picsum.photos/id/237/200/300" alt="a">
-                            <p>nome</p>
-                        </div>
-                        <div class="contatto">
-                            <img src="https://picsum.photos/id/237/200/300" alt="a">
-                            <p>nome</p>
-                        </div>
-                        <div class="contatto">
-                            <img src="https://picsum.photos/id/237/200/300" alt="a">
-                            <p>nome</p>
-                        </div>
-                        <div class="contatto">
-                            <img src="https://picsum.photos/id/237/200/300" alt="a">
-                            <p>nome</p>
-                        </div>
-                        <div class="contatto">
-                            <img src="https://picsum.photos/id/237/200/300" alt="a">
-                            <p>nome</p>
+                        <div class="contatto" v-for="contact in contacts">
+                            <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="a">
+                            <p>{{contact.name}}</p>
                         </div>
                     </div>
                 </section>
@@ -116,15 +96,24 @@
                  -->
                 <section id="container">
                     <div class="mex_area">
-                        <div class="sent">
-                            <p>
-
-                            </p>
-                        </div>
-                        <div class="received">
-                            <p>
+                        <div v-for="message in contacts[counter].messages">
+                            <div v-if="message.status == 'sent'" class="sent">
+                                <p>
+                                    {{message.text}}
+                                    <span class="date">
+                                        {{message.date}}
+                                    </span>
+                                </p>
+                            </div>
+                            <div v-else class="received">
+                                <p>
+                                    {{message.text}}
+                                    <span class="date">
+                                        {{message.date}}
+                                    </span>
+                                </p>
                                 
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div class="txt_area">

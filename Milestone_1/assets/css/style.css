@@ -92,6 +92,7 @@ nav .chat_corrente {
 .chat_corrente .txt p:last-child {
     font-size: 1rem;
     padding-top: 0.5rem;
+    color: #6b7376;
 }
 
 /* 
@@ -228,3 +229,44 @@ main #mainContainer {
     color: #6b7376;
     font-size: 2rem;
 }
+
+.sent {
+    text-align: end;
+    padding: 1rem;
+    padding-right: 2rem;
+}
+
+.sent p {
+    background-color: #d5f9ba;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.sent .date {
+    display: block;
+    font-size: 1rem;
+    color: #6b7376;
+}
+
+.received {
+    text-align: start;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+.received p {
+    background-color: white;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-width: 40%;
+}
+
+.received .date {
+    display: block;
+    font-size: 1rem;
+    color: #6b7376;
+    text-align: end;
+}
+
