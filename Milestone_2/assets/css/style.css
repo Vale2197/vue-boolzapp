@@ -179,7 +179,12 @@ main #mainContainer {
     padding: 1rem;
     align-items: flex-start;
     border-bottom: 1px solid #eaeaea;
+    transition: 0.5s;
     
+}
+
+#mainSide .contatto:hover {
+    background-color: #eaeaea;
 }
 
 #mainSide .contatti {

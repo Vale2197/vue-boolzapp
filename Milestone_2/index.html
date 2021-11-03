@@ -85,7 +85,7 @@
                          / SEARCH
                      -->
                     <div class="contatti">
-                        <div class="contatto" v-for="contact in contacts">
+                        <div @click="contactSelector(index)" class="contatto" v-for="(contact, index) in contacts">
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="a">
                             <p>{{contact.name}}</p>
                         </div>

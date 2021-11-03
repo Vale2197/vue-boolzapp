@@ -122,5 +122,10 @@ const root = new Vue({
             
         
             
+    },
+    methods: {
+        contactSelector(i) {
+            this.counter = i
+        }
     }
 })
