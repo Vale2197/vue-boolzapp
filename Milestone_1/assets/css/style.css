@@ -100,13 +100,12 @@ nav .chat_corrente {
 main {
     width: 100%;
     background-color: #dadbd4;
-    padding-bottom: 3rem;
-    height: calc(100vh - 8rem);
+    padding-bottom: 2rem;
+    height: 100%;
 }
 
 main #mainContainer {
     width: 80%;
-    height: 32rem;
     margin: auto;
     background-color: white;
     display: flex;
@@ -114,7 +113,7 @@ main #mainContainer {
 
 #mainContainer #mainSide {
     width: 35%;
-    background-color: pink;
+    background-color: white;
 }
 
 #mainSide .notifiche {
@@ -171,7 +170,27 @@ main #mainContainer {
     border: none;
     margin-left: 1rem;
 }
+/*   / SEARCH */
 
+
+#mainSide .contatto {
+    display: flex;
+    padding: 1rem;
+    align-items: flex-start;
+    border-bottom: 1px solid #eaeaea;
+    
+}
+
+#mainSide .contatti {
+    overflow: scroll;
+    height: 600px;
+}
+
+#mainSide .contatto img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
 
 /* 
         //// MAIN SIDE
