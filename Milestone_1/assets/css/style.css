@@ -198,5 +198,33 @@ main #mainContainer {
 
 #mainContainer #container {
     width: 65%;
-    background-color: cornflowerblue;
+}
+
+#container .mex_area {
+    background-image: url("../img/mine.jpg");
+    height: calc(100% - 5rem);
+    overflow: scroll;
+}
+
+#container .txt_area {
+    background-color: #eaeaea;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container .txt_area input {
+    width: 90%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem;
+}
+
+#container .txt_area i {
+    width: 4rem;
+    text-align: center;
+    color: #6b7376;
+    font-size: 2rem;
 }
