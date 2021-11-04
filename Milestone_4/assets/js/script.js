@@ -159,7 +159,7 @@ const root = new Vue({
             
             return this.contacts.filter((contact) => {
                 if(contact.name.toLowerCase().includes(this.search.toLowerCase())) {
-                    return contact
+                    return contact;
                 }
             })
         
