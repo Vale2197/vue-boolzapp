@@ -278,3 +278,6 @@ main #mainContainer {
     text-align: end;
 }
 
+.active {
+    background-color: #eaeaea;
+}

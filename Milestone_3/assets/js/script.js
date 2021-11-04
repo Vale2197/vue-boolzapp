@@ -96,21 +96,25 @@ const root = new Vue({
             name: 'Pam',
             avatar: '_5',
             visible: true,
+            messages: []
             },
             {
             name: 'Michael',
             avatar: '_6',
             visible: true,
+            messages: []
             },
             {
             name: 'Angela',
             avatar: '_7',
             visible: true,
+            messages: []
             },
             {
             name: 'Kevin',
             avatar: '_8',
             visible: true,
+            messages: []
             },
         ],
         
