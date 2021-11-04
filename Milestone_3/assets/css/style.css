@@ -8,6 +8,7 @@ body {
     font-size: 1.5rem;
     font-family: monospace;
     min-width: 1440px;
+    background-color: #dadbd4;
 }
 
 i {
@@ -190,7 +191,7 @@ main #mainContainer {
 }
 
 #mainSide .contatti {
-    overflow: scroll;
+    overflow: auto;
     height: 500px;
 }
 
@@ -211,7 +212,7 @@ main #mainContainer {
 #container .mex_area {
     background-image: url("../img/mine.jpg");
     height: calc(700px - 5rem);
-    overflow: scroll;
+    overflow: auto;
 }
 
 #container .txt_area {
