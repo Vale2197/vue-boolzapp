@@ -36,10 +36,10 @@
                 <div class="chat_corrente">
                     <div class="nome">
                         <div class="img">
-                            <img :src="'./assets/img/avatar' + filteredList[counter].avatar + '.jpg'" alt="s">
+                            <img :src="'./assets/img/avatar' + contacts[counter].avatar + '.jpg'" alt="s">
                         </div>
                         <div class="txt">
-                            <p>{{filteredList[counter].name}}</p>
+                            <p>{{contacts[counter].name}}</p>
                             <p>ultimo accesso oggi alle</p>
                         </div>
                     </div>
@@ -85,7 +85,13 @@
                          / SEARCH
                      -->
                     <div class="contatti">
-                        <div @click="contactSelector(index)" :class="index === counter ? 'active' : ''" class="contatto" v-for="(contact, index) in filteredList">
+                        <div 
+                            @click="contactSelector(index)" 
+                            :class="index === counter ? 'active' : ''" 
+                            class="contatto" 
+                            v-for="(contact, index) in contacts"
+                            v-if="contact.name.toLowerCase().includes(search.toLowerCase())"
+                        >
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="a">
                             <p>{{contact.name}}</p>
                         </div>
@@ -96,7 +102,7 @@
                  -->
                 <section id="container">
                     <div class="mex_area">
-                        <div v-for="(message, index) in filteredList[counter].messages">
+                        <div v-for="(message, index) in contacts[counter].messages">
                             <div v-if="message.status == 'sent'" class="sent">
                                 <p>
                                     {{message.text}}
