@@ -95,11 +95,12 @@
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="a">
                             <div class="txt">
                                 <p>{{contact.name}}</p>
-                                <p v-if="contact.messages.length != 0" class="lastMex">
-                                    
+                                
+                                <p v-if="contact.messages.length != 0" class="lastMex"> 
                                    {{contact.messages[contact.messages.length - 1].text}}
                                 </p>
                             </div>
+                            
                         </div>
                     </div>
                 </section>

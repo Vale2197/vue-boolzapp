@@ -7,7 +7,7 @@
 body {
     font-size: 1.5rem;
     font-family: monospace;
-    /* min-width: 1440px; */
+    min-width: 1440px;
     background-color: #dadbd4;
 }
 
@@ -180,7 +180,7 @@ main #mainContainer {
 #mainSide .contatto {
     display: flex;
     padding: 1rem;
-    align-items: flex-start;
+    align-items:stretch;
     border-bottom: 1px solid #eaeaea;
     transition: 0.5s;
     
@@ -199,6 +199,20 @@ main #mainContainer {
     width: 5rem;
     height: 5rem;
     margin-right: 1rem;
+}
+
+#mainSide .contatto .lastMex {
+    white-space: nowrap; 
+    width: 20%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    color: #6b7376;
+    padding-top: 0.5rem;
+    display: block;
+}
+#mainSide .contatto .txt {
+    width: 50%;
 }
 
 /* 
