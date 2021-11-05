@@ -124,11 +124,8 @@ const root = new Vue({
             },
         counter: 0,
         mex: "", 
-        userMex:"",
-        
-        
-        
-        
+        userMex:"", 
+        lastMex:""  
     },
     methods: {
         contactSelector(i) {
@@ -151,6 +148,10 @@ const root = new Vue({
             setTimeout(() => this.contacts[this.counter].messages.splice(this.contacts[this.counter].messages.length, 0, mexUtente), 1000);
             
         }, 
+
         
     }, 
+   
+
+             
 })

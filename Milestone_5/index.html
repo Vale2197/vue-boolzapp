@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp_M5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="root">
+        <header>
+            <nav>
+
+                <div class="profilo_utente">
+
+                    <div class="nome">
+                        <div class="img">
+                            <img :src="'./assets/img/avatar' + me.avatar + '.jpg'" alt="ss">
+                        </div>
+                        <p>{{me.name}}</p>
+                    </div>
+                    <!-- /nome utente -->
+                    <div class="opzioni_profilo">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <!-- / opzioni utente -->
+                </div>
+                <!-- 
+                   / PROFILO UTENTE
+                 -->
+
+                <div class="chat_corrente">
+                    <div class="nome">
+                        <div class="img">
+                            <img :src="'./assets/img/avatar' + contacts[counter].avatar + '.jpg'" alt="s">
+                        </div>
+                        <div class="txt">
+                            <p>{{contacts[counter].name}}</p>
+                            <p>ultimo accesso oggi alle</p>
+                        </div>
+                    </div>
+                    <!-- / profilo chat corrente -->
+                    <div class="opzioni_chat">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- 
+                    / CHAT CORRENTE
+                 -->
+            </nav>
+        </header>
+        <!-- 
+                // HEADER
+         -->
+        <main>
+            <div id="mainContainer">
+
+                <section id="mainSide">
+
+                    <div class="notifiche">
+                        <div class="img_notifiche">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="txt">
+                            <p>ricevi notifiche di nuovi messaggi</p>
+                            <p><a href="#">attiva notifiche desktop</a></p>
+                        </div>
+                    </div>
+                    <!-- 
+                        / NOTIFICHE
+                     -->
+                    <div class="search">
+                        <div class="insert_txt">
+                            <i class="fas fa-search"></i>
+                            <input type="text" v-model="search" placeholder="Cerca o inizia una nuova Chat">
+                        </div>
+                    </div>
+                    <!-- 
+                         / SEARCH
+                     -->
+                    <div class="contatti">
+                        <div 
+                            @click="contactSelector(index)" 
+                            :class="index === counter ? 'active' : ''" 
+                            class="contatto" 
+                            v-for="(contact, index) in contacts"
+                            v-if="contact.name.toLowerCase().includes(search.toLowerCase())"
+                        >
+                            <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="a">
+                            <div class="txt">
+                                <p>{{contact.name}}</p>
+                                <p v-if="contact.messages.length != 0" class="lastMex">
+                                    
+                                   {{contact.messages[contact.messages.length - 1].text}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 
+                     // COMPLETATA SIDEBAR
+                 -->
+                <section id="container">
+                    <div class="mex_area">
+                        <div v-for="(message, index) in contacts[counter].messages">
+                            <div v-if="message.status == 'sent'" class="sent">
+                                <p>
+                                    {{message.text}}
+                                    <span class="date">
+                                        {{message.date}}
+                                    </span>
+                                </p>
+                            </div>
+                            <div v-else class="received">
+                                <p>
+                                    {{message.text}}
+                                    <span class="date">
+                                        {{message.date}}
+                                    </span>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt_area">
+                        <i class="far fa-smile"></i>
+                        <input v-model="mex" v-on:keyup.enter="sendMex" type="text" placeholder="Scrivi un messaggio">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
