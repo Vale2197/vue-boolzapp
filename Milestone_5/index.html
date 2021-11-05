@@ -95,7 +95,7 @@
                             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="a">
                             <div class="txt">
                                 <p>{{contact.name}}</p>
-                                
+
                                 <p v-if="contact.messages.length != 0" class="lastMex"> 
                                    {{contact.messages[contact.messages.length - 1].text}}
                                 </p>
@@ -112,19 +112,27 @@
                         <div v-for="(message, index) in contacts[counter].messages">
                             <div v-if="message.status == 'sent'" class="sent">
                                 <p>
-                                    {{message.text}}
+                                    {{message.text}} <i @click="infoMessage(index)" class="fas fa-chevron-down"></i>
                                     <span class="date">
                                         {{message.date}}
-                                    </span>
+                                    </span> 
                                 </p>
+                                <ul v-if="mexCount == index" :class="{activeInfo : infoM}">
+                                    <li>Message info</li>
+                                    <li>Delete message</li>
+                                </ul> 
                             </div>
                             <div v-else class="received">
                                 <p>
-                                    {{message.text}}
+                                    {{message.text}} <i @click="infoMessage(index)" class="fas fa-chevron-down"></i>
                                     <span class="date">
                                         {{message.date}}
                                     </span>
                                 </p>
+                                <ul v-if="mexCount == index" :class="{activeInfo : infoM}">
+                                    <li>Message info</li>
+                                    <li>Delete message</li>
+                                </ul> 
                                 
                             </div>
                         </div>

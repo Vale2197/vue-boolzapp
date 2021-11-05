@@ -256,6 +256,7 @@ main #mainContainer {
     text-align: end;
     padding: 1rem;
     padding-right: 2rem;
+    position: relative;
 }
 
 .sent p {
@@ -263,6 +264,32 @@ main #mainContainer {
     display: inline-block;
     padding: 1rem;
     border-radius: 0.5rem;
+}
+
+.sent ul {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 4rem;
+    top: 4rem;
+    z-index: 1;
+    background-color: white;
+    height: fit-content;
+    list-style-type: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px grey;
+    
+}
+
+.sent li {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+}
+
+.sent li:hover {
+    background-color: #eaeaea;
 }
 
 .sent .date {
@@ -275,6 +302,7 @@ main #mainContainer {
     text-align: start;
     padding: 1rem;
     padding-left: 2rem;
+    position: relative;
 }
 
 .received p {
@@ -283,6 +311,7 @@ main #mainContainer {
     padding: 1rem;
     border-radius: 0.5rem;
     min-width: 40%;
+    position: relative;
 }
 
 .received .date {
@@ -292,6 +321,46 @@ main #mainContainer {
     text-align: end;
 }
 
+.received ul {
+    display: none; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 2rem;
+    top: 5rem;
+    z-index: 1;
+    background-color: white;
+    height: fit-content;
+    list-style-type: none;
+    border-radius: 0.5rem;
+    box-shadow: 3px -2px 3px grey;
+    
+}
+
+.received li {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+}
+.received li:hover {
+    background-color: #eaeaea;
+}
+
+.received i {
+    position: absolute;
+    right: 0;
+    margin-right: 1.3rem;
+}
+
 .active {
     background-color: #eaeaea;
 }
+
+
+.activeInfo {
+    display: block !important;
+}
+.activeInfo2 {
+    display: block !important;
+}
+

@@ -125,7 +125,9 @@ const root = new Vue({
         counter: 0,
         mex: "", 
         userMex:"", 
-        lastMex:""  
+        lastMex:"",
+        infoM: false, 
+        mexCount: 0,
     },
     methods: {
         contactSelector(i) {
@@ -149,6 +151,15 @@ const root = new Vue({
             
         }, 
 
+        infoMessage(i) {
+            this.mexCount = i
+            if(this.infoM == false) {
+                this.infoM = true
+            }
+            else if (this.infoM == true) {
+                this.infoM = false
+            }
+        },
         
     }, 
    
