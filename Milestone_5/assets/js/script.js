@@ -160,6 +160,13 @@ const root = new Vue({
                 this.infoM = false
             }
         },
+
+        deleteMex() {
+           
+                this.contacts[this.counter].messages.splice(this.mexCount, 1);
+                console.log(this.mexCount);
+                console.log(this.counter);
+        }
         
     }, 
    

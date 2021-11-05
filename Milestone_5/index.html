@@ -119,7 +119,7 @@
                                 </p>
                                 <ul v-if="mexCount == index" :class="{activeInfo : infoM}">
                                     <li>Message info</li>
-                                    <li>Delete message</li>
+                                    <li @click="deleteMex">Delete message</li>
                                 </ul> 
                             </div>
                             <div v-else class="received">
@@ -131,7 +131,7 @@
                                 </p>
                                 <ul v-if="mexCount == index" :class="{activeInfo : infoM}">
                                     <li>Message info</li>
-                                    <li>Delete message</li>
+                                    <li @click="deleteMex">Delete message</li>
                                 </ul> 
                                 
                             </div>

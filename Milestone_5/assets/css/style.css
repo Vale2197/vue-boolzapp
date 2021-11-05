@@ -264,6 +264,7 @@ main #mainContainer {
     display: inline-block;
     padding: 1rem;
     border-radius: 0.5rem;
+    box-shadow: 2px 2px 5px grey;
 }
 
 .sent ul {
@@ -278,7 +279,7 @@ main #mainContainer {
     height: fit-content;
     list-style-type: none;
     border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px grey;
+    box-shadow: 0px 0px 2px grey;
     
 }
 
@@ -312,6 +313,7 @@ main #mainContainer {
     border-radius: 0.5rem;
     min-width: 40%;
     position: relative;
+    box-shadow: -2px 2px 5px grey;
 }
 
 .received .date {
@@ -333,7 +335,7 @@ main #mainContainer {
     height: fit-content;
     list-style-type: none;
     border-radius: 0.5rem;
-    box-shadow: 3px -2px 3px grey;
+    box-shadow: 0px 0px 2px grey;
     
 }
 
